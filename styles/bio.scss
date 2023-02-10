@@ -1,0 +1,87 @@
+@use "./partials/global" as *;
+@use "./partials/mixins" as*;
+
+
+
+//HERO SECTION//
+
+.hero {
+    display: flex;
+    background-image: linear-gradient(rgba(0,0,0, 0.527), rgba(0, 0, 0, 0.5)),url("../assets/Images/hero-bio.jpg"); 
+    width: 100%;
+    height: 45vh; 
+    background-position: center;
+    background-size:cover;
+    // justify-content: center;
+    align-items: center;
+    
+
+
+    &__header {
+     padding-left: 16px;  
+     color: white;
+     
+     
+    
+    }
+
+}
+
+//ABOUT
+
+h1.about-container__header{
+    margin: 20px;
+    }
+
+    .about-container {
+        margin: 0 1rem;
+    
+        &__header {
+            margin: 1.5rem 1rem 1.5rem 1rem;
+            
+        }
+    
+        &__img {
+            width: 100%;
+        }
+    }
+    
+
+
+
+//GALLERY
+
+.gallery-header {
+    padding-left: 1rem;
+}
+
+
+.gallery-container {
+    
+    margin: 0;
+    padding: 1rem 1rem 1rem 1rem;
+    @include tablet{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__img {
+        width: 100%;
+        margin-top: 1rem;
+    @include tablet {
+        width: 29%;
+        padding: .5rem;
+        margin-top: 0;
+    
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+

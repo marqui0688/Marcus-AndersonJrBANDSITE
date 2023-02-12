@@ -1,4 +1,3 @@
-@use "./typography" as *;
 
 
 
@@ -23,7 +22,7 @@
 
     &__container {
     display: flex;
-    justify-content: center;
+    justify-content: center; 
     
 
 
@@ -73,32 +72,53 @@
 
 .footer {
 
-   
     width: 100%;
     background-color: #323232;
     color: white;
-    font-size: 13px;
+    // font-size: 13px;
+
+    &__title {
+        margin: 1rem;
+        padding-top:3rem;
+        
+        
+
+
+    }
      
 
     &__logo-container{
         display: flex;
         gap: 2rem;
+        margin: 1rem;
     }
 
     &__icon {
-        height: 1.5rem;
+        height: 2.5rem;
+
     }
 
 
-    &__contacts{
-        display: flex;
-        flex-direction: column;
-
-
+    // &__contacts-container{
+    // }
+    
         
 
-    }
+    
     &__contact-name{
         font-weight: 600;
+        margin-bottom: 1rem;
+        
+    }
+    &__contact-company {
+        margin-bottom: .5rem;
+    }
+    &__contact-address {
+        margin-bottom: .5rem;
+        width: 22ch;
+    }
+    &__contact-email {
+        margin-bottom: .5rem;
     }
 }
+

@@ -113,10 +113,16 @@ header {
 }
 .footer__contact-name {
   font-weight: 600;
+  width: 15ch;
+}
+.footer__contact-line2 {
+  font-weight: 600;
   margin-bottom: 1rem;
+  width: 20ch;
+  margin-top: 0.5rem;
 }
 .footer__contact-company {
-  margin-bottom: 0.5rem;
+  margin-bottom: 2rem;
 }
 .footer__contact-address {
   margin-bottom: 0.5rem;
@@ -175,6 +181,12 @@ header {
   background-size: cover;
   align-items: center;
 }
+@media (min-width: 768px) {
+  .hero {
+    height: 80vh;
+    font-size: 4rem;
+  }
+}
 .hero__header {
   padding-left: 16px;
   color: white;
@@ -188,6 +200,13 @@ header {
   margin: 1.5rem 1rem 1.5rem 1rem;
   font-weight: 600;
 }
+@media (min-width: 768px) {
+  .about-container__header {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    font-size: 2rem;
+  }
+}
 .about-container__img {
   width: 100%;
 }
@@ -197,6 +216,11 @@ header {
   margin-bottom: 1rem;
   font-size: 17px;
   line-height: 1.5rem;
+}
+@media (min-width: 768px) {
+  .about-container__subheader {
+    margin-left: 0.75rem;
+  }
 }
 .about-container__subheader-quote {
   font-weight: 600;
@@ -211,8 +235,22 @@ header {
   font-size: 1.2rem;
   font-weight: 500;
 }
+@media (min-width: 768px) {
+  .about-container__band {
+    font-size: 2rem;
+    font-weight: 700;
+    padding-left: 2.5rem;
+  }
+}
 .about-container__bio {
   margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .about-container__bio {
+    padding-left: 2.5rem;
+    padding-right: 1.5rem;
+    margin-bottom: 4rem;
+  }
 }
 @media (min-width: 768px) {
   .about-container__article {
@@ -232,6 +270,7 @@ header {
   .gallery-container {
     display: flex;
     flex-wrap: wrap;
+    padding-left: 1.5rem;
   }
 }
 .gallery-container__img {

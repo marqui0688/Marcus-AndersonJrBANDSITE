@@ -146,11 +146,17 @@ header {
     
     &__contact-name{
         font-weight: 600;
+        // margin-bottom: 1rem;
+        width: 15ch;}
+
+    &__contact-line2 {
+        font-weight: 600;
         margin-bottom: 1rem;
-        
+        width: 20ch;
+        margin-top: .5rem;
     }
     &__contact-company {
-        margin-bottom: .5rem;
+        margin-bottom: 2rem;
     }
     &__contact-address {
         margin-bottom: .5rem;

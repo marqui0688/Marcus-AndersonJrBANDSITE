@@ -17,12 +17,26 @@ header {
 .navigation {
   text-align: center;
 }
+@media (min-width: 768px) {
+  .navigation {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin-left: 1rem;
+  }
+}
 .navigation__list {
   display: flex;
 }
 .navigation__logo {
   color: white;
   margin-bottom: 0.75rem;
+}
+@media (min-width: 768px) {
+  .navigation__logo {
+    margin: 0;
+    margin-right: 4rem;
+  }
 }
 .navigation__item {
   list-style-type: none;
@@ -33,6 +47,12 @@ header {
 }
 .navigation__item:hover {
   border-bottom: 4px solid white;
+}
+@media (min-width: 768px) {
+  .navigation__item {
+    margin: 1rem;
+    margin-right: 2.3rem;
+  }
 }
 .navigation__item--active {
   border-bottom: 4px solid white;

@@ -26,6 +26,12 @@ header {
 
 .navigation {
     text-align: center;
+    @include tablet {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        margin-left: 1rem;
+    }
 
 
 
@@ -40,6 +46,10 @@ header {
     &__logo {
         color: white;
         margin-bottom: .75rem;
+        @include tablet {
+            margin: 0;
+            margin-right: 4rem;
+        }
     }
 
 
@@ -52,11 +62,19 @@ header {
         width:50%;
         &:hover {
             border-bottom: 4px solid white;
+
+        }
+        @include tablet {
+            margin:1rem;
+            margin-right: 2.3rem;
+
         }
         &--active{
             border-bottom: 4px solid white;
             font-weight: 600;
+           
         }
+
     }
 }
 

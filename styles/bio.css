@@ -1,11 +1,11 @@
 * {
   margin: 0;
+  padding: 0;
   font-family: "Avenir";
   font-weight: 400;
 }
 
-.header {
-  display: flex;
+header {
   flex-direction: column;
   width: 100%;
   background-color: #323232;
@@ -13,37 +13,28 @@
   justify-content: center;
   padding-top: 1rem;
 }
-.header__container {
-  display: flex;
-  justify-content: center;
+
+.navigation {
+  text-align: center;
 }
-.header__logo {
+.navigation__list {
+  display: flex;
+}
+.navigation__logo {
   color: white;
   margin-bottom: 0.75rem;
 }
-.header__nav-bar {
-  display: flex;
-  margin: 0px;
-}
-.header__nav-container {
-  display: flex;
-  width: 100%;
-  padding: 0%;
-  justify-content: space-around;
-}
-.header__nav-items {
+.navigation__item {
   list-style-type: none;
-  text-align: center;
   font-size: 15px;
   line-height: 32px;
   color: white;
-  justify-content: space-between;
-  width: 100%;
+  width: 50%;
 }
-.header__nav-items:hover {
+.navigation__item:hover {
   border-bottom: 4px solid white;
 }
-.header__nav-items--active {
+.navigation__item--active {
   border-bottom: 4px solid white;
   font-weight: 600;
 }
@@ -65,6 +56,9 @@
 .footer__icon {
   height: 2.5rem;
 }
+.footer__contacts-container {
+  margin: 1rem;
+}
 .footer__contact-name {
   font-weight: 600;
   margin-bottom: 1rem;
@@ -78,6 +72,15 @@
 }
 .footer__contact-email {
   margin-bottom: 0.5rem;
+}
+.footer__logo {
+  margin-bottom: 1rem;
+  margin-top: 4rem;
+  margin-left: 1rem;
+}
+.footer__copyright {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
 }
 
 @font-face {

@@ -1,60 +1,55 @@
-
+@use "./mixins" as*;
+@use "./variables" as*;
 
 
 * {
     margin: 0;
+    padding: 0;
     font-family: 'Avenir';
     font-weight: 400;
 }
 
 //HEADER
 
-.header {
-    display: flex;
+header {
+    // display: flex;
     flex-direction: column;
     width: 100%;
     background-color: #323232;
     position:sticky;
     justify-content: center;
-    padding-top:1rem;
+
+    padding-top: 1rem;
+
+}
     
 
-
-    &__container {
-    display: flex;
-    justify-content: center; 
-    
+.navigation {
+    text-align: center;
 
 
+
+    &__list {
+        display: flex;
     }
+    
+    
+
+
+    
     &__logo {
         color: white;
         margin-bottom: .75rem;
     }
 
 
-    &__nav-bar { 
-        display: flex;
-        margin: 0px;
-        
 
-    }
-    &__nav-container {
-        display: flex;
-        width: 100%;
-        padding: 0%;
-        justify-content: space-around;
-        
-
-    }
-    &__nav-items {
+    &__item {
         list-style-type: none;
-        text-align: center;
         font-size: 15px;
         line-height: 32px;
         color: white;
-        justify-content:space-between;
-        width:100%;
+        width:50%;
         &:hover {
             border-bottom: 4px solid white;
         }
@@ -64,6 +59,7 @@
         }
     }
 }
+
 
 
 
@@ -99,11 +95,11 @@
     }
 
 
-    // &__contacts-container{
-    // }
     
-        
-
+    &__contacts-container
+    {
+        margin: 1rem;
+    }
     
     &__contact-name{
         font-weight: 600;
@@ -120,5 +116,17 @@
     &__contact-email {
         margin-bottom: .5rem;
     }
+    &__logo {
+        margin-bottom: 1rem;
+        margin-top: 4rem;
+        margin-left: 1rem;
+
+    }
+    &__copyright {
+        margin-left: 1rem;
+        margin-bottom: 1rem;
+    }
 }
+
+
 

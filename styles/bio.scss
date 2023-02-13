@@ -28,11 +28,7 @@
 }
 
 
-
-
  /* ABOUT */
-
-
 
 .about-container {
   margin: 0 1rem;
@@ -125,7 +121,7 @@
   @include tablet {
     padding-left: 3rem;
     @include desktop {
-      padding-left: 5rem;
+          padding-left: 1.5rem;
     }
   }
 }
@@ -138,11 +134,13 @@
     flex-wrap: wrap;
     padding-left: 1.5rem;
     @include desktop {
-      padding-left: 5rem;
+      padding-left: 1rem;
+      padding-right: 0;
     }
   }
   &__img {
     width: 100%;
+    padding-top: 1rem;
     @include tablet {
       width: 29%;
       padding: 0.5rem;

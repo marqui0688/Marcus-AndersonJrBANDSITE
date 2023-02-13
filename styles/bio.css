@@ -313,7 +313,7 @@ header {
 }
 @media (min-width: 768px) and (min-width: 1280px) {
   .gallery-header {
-    padding-left: 5rem;
+    padding-left: 1.5rem;
   }
 }
 
@@ -330,11 +330,13 @@ header {
 }
 @media (min-width: 768px) and (min-width: 1280px) {
   .gallery-container {
-    padding-left: 5rem;
+    padding-left: 1rem;
+    padding-right: 0;
   }
 }
 .gallery-container__img {
   width: 100%;
+  padding-top: 1rem;
 }
 @media (min-width: 768px) {
   .gallery-container__img {

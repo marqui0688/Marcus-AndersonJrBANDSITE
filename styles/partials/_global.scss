@@ -9,7 +9,8 @@
     font-weight: 400;
 }
 
-//HEADER
+/* HEADER */
+
 
 header {
     // display: flex;
@@ -23,7 +24,7 @@ header {
 
 }
     
-
+/* NAVIGATION BAR */
 .navigation {
     text-align: center;
     @include tablet {
@@ -53,6 +54,7 @@ header {
     }
 
 
+/* NAVIGATION ITEMS */
 
     &__item {
         list-style-type: none;
@@ -82,7 +84,7 @@ header {
 
 
 
-//FOOTER
+/* FOOTER */
 
 .footer {
 
@@ -97,6 +99,9 @@ header {
     @include tablet {
         position: relative;
     }
+
+
+/* "Get in Touch!" and SOCIAL MEDIA ICONS */
     &__socials-container {
         @include tablet {
             display: flex;
@@ -112,10 +117,6 @@ header {
             padding: 0;
         }
     
-        
-        
-
-
     }
      
 
@@ -126,12 +127,12 @@ header {
     }
 
     &__icon {
-        height: 2.5rem;
+        height: 1.44rem;
 
     }
 
 
-    
+/* CONTACT NAMES AND EMAIL ADDRESS */    
     &__contacts-container
     {
         margin: 1rem;
@@ -141,6 +142,10 @@ header {
             margin-left: 2rem;
             padding-left: 1rem;
             padding-right: 2rem;
+            padding-bottom: 4rem;
+            @include desktop {
+                padding-bottom: 4rem;
+            }
         }
     }
     
@@ -162,9 +167,14 @@ header {
         margin-bottom: .5rem;
         width: 22ch;
     }
-    &__contact-email {
+    &__contact-email a {
         margin-bottom: .5rem;
+        text-decoration: none;
+        
+        
     }
+    
+/* LOGO */
     &__logo {
         margin-bottom: 1rem;
         margin-top: 4rem;
@@ -177,12 +187,12 @@ header {
         }
 
     }
+
+    /* COPYRIGHT */
     &__copyright {
         margin-left: 1rem;
-        margin-bottom: 1rem;
         @include tablet {
             margin-left: 2rem;
-            margin-bottom: 1rem;
             padding-left: 1rem;
             padding-bottom: 2rem;
         }

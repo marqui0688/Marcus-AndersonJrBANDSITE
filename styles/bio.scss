@@ -2,150 +2,151 @@
 @use "./partials/mixins" as *;
 @use "./partials/typography" as *;
 
-
-
-//HERO SECTION//
+ /* HERO */
 
 .hero {
-    display: flex;
-    background-image: linear-gradient(rgba(0,0,0, 0.527), rgba(0, 0, 0, 0.5)),url("../assets/Images/hero-bio.jpg"); 
-    width: 100%;
-    height: 30vh; 
-    background-position: center;
-    background-size:cover;
-    align-items: center;
-    
-    @include tablet {
-        height: 80vh;
-        font-size:4rem;
-        // padding-left: 7rem;
+  display: flex;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+    url("../assets/Images/hero-bio.jpg");
+  width: 100%;
+  height: 30vh;
+  background-position: center;
+  background-size: cover;
+  align-items: center;
 
-    }
-    
+  @include tablet {
+    height: 80vh;
+    font-size: 4rem;
+    // padding-left: 7rem;
+  }
 
-
-    &__header {
-     padding-left: 16px;  
-     color: white;
-     font-weight: 600;
-     
-     
-    
-    }
-
+  &__header {
+    padding-left: 16px;
+    color: white;
+    font-weight: 600;
+  }
 }
 
-//ABOUT
 
-// 
 
-    .about-container {
-        margin: 0 1rem;
-    
-        &__header {
-            margin: 1.5rem 1rem 1.5rem 1rem;
-            font-weight: 600;
-            @include tablet {
-                padding-top: 1rem;
-                padding-bottom: 2rem;
-                font-size: 2rem;
-                
 
-            }
-        }
-    
-        &__img {
-            width: 100%;
-        } 
-        &__subheader {
-            font-weight: 600;
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-            font-size: 17px;
-            line-height: 1.5rem;
-            @include tablet {
-                margin-left: .75rem;
-            }
-        }
-        &__subheader-quote {
-            font-weight: 600;
-            margin-top: .5rem;
-            margin-bottom: 1rem;
-            font-size: 17px;
-            line-height: 1.5rem;
-        }
-        &__band {
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-            font-weight: 500;
-            @include tablet {
-            font-size: 2rem;
-            font-weight: 700;
-            padding-left: 2.5rem;
-            }
-        }
-        &__bio {
-            margin-bottom: 1rem;
-            @include tablet {
-            padding-left: 2.5rem;
-            padding-right: 1.5rem;
-            margin-bottom: 4rem;}
-            
-            @include desktop {
-                padding-left: 5rem;
-                padding-right: 5rem;
-                margin-bottom: 4rem;
-            }
-            
-        }
-            
-        
-        &__article{
-            @include tablet{
-                display: flex;
-            }
-        
-        }
+ /* ABOUT */
+
+
+
+.about-container {
+  margin: 0 1rem;
+
+  &__header {
+    margin: 1.5rem 1rem 1.5rem 1rem;
+    font-weight: 600;
+    @include tablet {
+      padding-top: 1rem;
+      padding-bottom: 2rem;
+      font-size: 2rem;
     }
-    
+  }
+
+  &__img {
+    width: 100%;
+    @include tablet {
+      width: calc(100% - 1rem);
+      @include desktop {
+        width: calc(90% - 2rem);
+      padding-left: 5rem;
+      }
+    }
+  }
+
+  &__subheader {
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 17px;
+    line-height: 1.5rem;
+    @include tablet {
+      margin-left: 0.75rem;
+      @include desktop {
+        padding-left: 4rem;
+        padding-bottom: 2rem;
+;
+      }
+    }
+  }
+  &__subheader-quote {
+    font-weight: 600;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 17px;
+    line-height: 1.5rem;
+  }
+  &__band {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    @include tablet {
+      font-size: 2rem;
+      font-weight: 700;
+      padding-left: 2.5rem;
+      @include desktop {
+        padding-left: 5rem;
+      }
+    }
+  }
+  &__bio {
+    margin-bottom: 1rem;
+    @include tablet {
+      padding-left: 2.5rem;
+      padding-right: 1.5rem;
+      margin-bottom: 4rem;
+    }
+
+    @include desktop {
+      padding-left: 5rem;
+      padding-right: 5rem;
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__article {
+    @include tablet {
+      display: flex;
+    }
+  }
+}
 
 
 
-//GALLERY
+/* GALLERY */
 
 .gallery-header {
-    padding-left: 1rem;
+  padding-left: 1rem;
+  @include tablet {
+    padding-left: 3rem;
+    @include desktop {
+      padding-left: 5rem;
+    }
+  }
 }
-
 
 .gallery-container {
-    
-    margin: 0;
-    padding: 1rem 1rem 1rem 1rem;
-    @include tablet{
-        display: flex;
-        flex-wrap: wrap;
-        padding-left: 1.5rem;
+  margin: 0;
+  padding: 1rem 1rem 1rem 1rem;
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 1.5rem;
+    @include desktop {
+      padding-left: 5rem;
     }
-    &__img {
-        width: 100%;
+  }
+  &__img {
+    width: 100%;
     @include tablet {
-        width: 29%;
-        padding: .5rem;
-        margin-top: 0;
-        
-    
-        }
+      width: 29%;
+      padding: 0.5rem;
+      margin-top: 0;
     }
+  }
 }
-
-
-
-
-
-
-
-
-
-

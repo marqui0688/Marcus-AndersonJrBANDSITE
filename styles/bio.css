@@ -5,6 +5,7 @@
   font-weight: 400;
 }
 
+/* HEADER */
 header {
   flex-direction: column;
   width: 100%;
@@ -14,8 +15,10 @@ header {
   padding-top: 1rem;
 }
 
+/* NAVIGATION BAR */
 .navigation {
   text-align: center;
+  /* NAVIGATION ITEMS */
 }
 @media (min-width: 768px) {
   .navigation {
@@ -59,10 +62,15 @@ header {
   font-weight: 600;
 }
 
+/* FOOTER */
 .footer {
   width: 100%;
   background-color: #323232;
   color: white;
+  /* "Get in Touch!" and SOCIAL MEDIA ICONS */
+  /* CONTACT NAMES AND EMAIL ADDRESS */
+  /* LOGO */
+  /* COPYRIGHT */
 }
 @media (min-width: 768px) {
   .footer {
@@ -97,7 +105,7 @@ header {
   margin: 1rem;
 }
 .footer__icon {
-  height: 2.5rem;
+  height: 1.44rem;
 }
 .footer__contacts-container {
   margin: 1rem;
@@ -109,6 +117,12 @@ header {
     margin-left: 2rem;
     padding-left: 1rem;
     padding-right: 2rem;
+    padding-bottom: 4rem;
+  }
+}
+@media (min-width: 768px) and (min-width: 1280px) {
+  .footer__contacts-container {
+    padding-bottom: 4rem;
   }
 }
 .footer__contact-name {
@@ -128,8 +142,9 @@ header {
   margin-bottom: 0.5rem;
   width: 22ch;
 }
-.footer__contact-email {
+.footer__contact-email a {
   margin-bottom: 0.5rem;
+  text-decoration: none;
 }
 .footer__logo {
   margin-bottom: 1rem;
@@ -146,12 +161,10 @@ header {
 }
 .footer__copyright {
   margin-left: 1rem;
-  margin-bottom: 1rem;
 }
 @media (min-width: 768px) {
   .footer__copyright {
     margin-left: 2rem;
-    margin-bottom: 1rem;
     padding-left: 1rem;
     padding-bottom: 2rem;
   }
@@ -172,6 +185,7 @@ header {
   src: url("/assets/Fonts/AvenirNextLTPro-Demi.otf") format("opentype");
   font-weight: 600;
 }
+/* HERO */
 .hero {
   display: flex;
   background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("../assets/Images/hero-bio.jpg");
@@ -193,6 +207,7 @@ header {
   font-weight: 600;
 }
 
+/* ABOUT */
 .about-container {
   margin: 0 1rem;
 }
@@ -210,6 +225,17 @@ header {
 .about-container__img {
   width: 100%;
 }
+@media (min-width: 768px) {
+  .about-container__img {
+    width: calc(100% - 1rem);
+  }
+}
+@media (min-width: 768px) and (min-width: 1280px) {
+  .about-container__img {
+    width: calc(90% - 2rem);
+    padding-left: 5rem;
+  }
+}
 .about-container__subheader {
   font-weight: 600;
   margin-top: 1rem;
@@ -220,6 +246,12 @@ header {
 @media (min-width: 768px) {
   .about-container__subheader {
     margin-left: 0.75rem;
+  }
+}
+@media (min-width: 768px) and (min-width: 1280px) {
+  .about-container__subheader {
+    padding-left: 4rem;
+    padding-bottom: 2rem;
   }
 }
 .about-container__subheader-quote {
@@ -233,13 +265,18 @@ header {
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-size: 1.2rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 @media (min-width: 768px) {
   .about-container__band {
     font-size: 2rem;
     font-weight: 700;
     padding-left: 2.5rem;
+  }
+}
+@media (min-width: 768px) and (min-width: 1280px) {
+  .about-container__band {
+    padding-left: 5rem;
   }
 }
 .about-container__bio {
@@ -265,8 +302,19 @@ header {
   }
 }
 
+/* GALLERY */
 .gallery-header {
   padding-left: 1rem;
+}
+@media (min-width: 768px) {
+  .gallery-header {
+    padding-left: 3rem;
+  }
+}
+@media (min-width: 768px) and (min-width: 1280px) {
+  .gallery-header {
+    padding-left: 5rem;
+  }
 }
 
 .gallery-container {
@@ -278,6 +326,11 @@ header {
     display: flex;
     flex-wrap: wrap;
     padding-left: 1.5rem;
+  }
+}
+@media (min-width: 768px) and (min-width: 1280px) {
+  .gallery-container {
+    padding-left: 5rem;
   }
 }
 .gallery-container__img {

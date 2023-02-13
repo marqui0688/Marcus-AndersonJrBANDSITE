@@ -252,6 +252,13 @@ header {
     margin-bottom: 4rem;
   }
 }
+@media (min-width: 1280px) {
+  .about-container__bio {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    margin-bottom: 4rem;
+  }
+}
 @media (min-width: 768px) {
   .about-container__article {
     display: flex;

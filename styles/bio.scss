@@ -90,12 +90,18 @@
             @include tablet {
             padding-left: 2.5rem;
             padding-right: 1.5rem;
-            margin-bottom: 4rem;
+            margin-bottom: 4rem;}
+            
+            @include desktop {
+                padding-left: 5rem;
+                padding-right: 5rem;
+                margin-bottom: 4rem;
             }
             
         }
-        &__article
-        {
+            
+        
+        &__article{
             @include tablet{
                 display: flex;
             }

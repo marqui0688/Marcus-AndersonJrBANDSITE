@@ -2,7 +2,7 @@
 @use "./partials/mixins" as *;
 @use "./partials/typography" as *;
 
- /* HERO */
+/* HERO */
 
 .hero {
   display: flex;
@@ -27,8 +27,7 @@
   }
 }
 
-
- /* ABOUT */
+/* ABOUT */
 
 .about-container {
   margin: 0 1rem;
@@ -49,7 +48,7 @@
       width: calc(100% - 1rem);
       @include desktop {
         width: calc(90% - 2rem);
-      padding-left: 5rem;
+        padding-left: 5rem;
       }
     }
   }
@@ -58,14 +57,13 @@
     font-weight: 600;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    font-size: 17px;
+    font-size: 1.0625rem;
     line-height: 1.5rem;
     @include tablet {
       margin-left: 0.75rem;
       @include desktop {
         padding-left: 4rem;
         padding-bottom: 2rem;
-;
       }
     }
   }
@@ -112,8 +110,6 @@
   }
 }
 
-
-
 /* GALLERY */
 
 .gallery-header {
@@ -121,7 +117,7 @@
   @include tablet {
     padding-left: 3rem;
     @include desktop {
-          padding-left: 1.5rem;
+      padding-left: 1.5rem;
     }
   }
 }
@@ -129,6 +125,7 @@
 .gallery-container {
   margin: 0;
   padding: 1rem 1rem 1rem 1rem;
+  background-color: #fafafa;
   @include tablet {
     display: flex;
     flex-wrap: wrap;
@@ -146,5 +143,51 @@
       padding: 0.5rem;
       margin-top: 0;
     }
+  }
+}
+
+/* COMMENTS FORM */
+
+.comments-header {
+  &__header {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+}
+
+.comments-container {
+  display: flex;
+  margin-top: 3rem;
+  margin-bottom: 6rem;
+
+  &__avatar {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+  &__name {
+    border: 2px solid #e1e1e1;
+    height: 3rem;
+    width: 14rem;
+    border-radius: 4px;
+  }
+  &__comment {
+    border: 2px solid #e1e1e1;
+    height: 6rem;
+    width: 15rem;
+    border-radius: 4px;
+  }
+  &__button {
+    background-color: #323232;
+    width: 14rem;
+    height: 3rem;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
   }
 }

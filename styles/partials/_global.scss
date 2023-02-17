@@ -1,203 +1,184 @@
-@use "./mixins" as*;
-@use "./variables" as*;
-
+@use "./mixins" as *;
+@use "./variables" as *;
 
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Avenir';
-    font-weight: 400;
+  margin: 0;
+  padding: 0;
+  font-family: "Avenir";
+  font-weight: 400;
+}
+
+a,
+li {
+  text-decoration: none;
+  color: white;
 }
 
 /* HEADER */
 
-
 header {
-    // display: flex;
-    flex-direction: column;
-    width: 100%;
-    background-color: #323232;
-    position:sticky;
-    justify-content: center;
+  // display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #323232;
+  position: sticky;
+  justify-content: center;
 
-    padding-top: 1rem;
-
+  padding-top: 1rem;
 }
-    
+
 /* NAVIGATION BAR */
 .navigation {
-    text-align: center;
+  text-align: center;
+  @include tablet {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin-left: 1rem;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__logo {
+    color: white;
+    margin-bottom: 0.75rem;
     @include tablet {
-        display: flex;
-        align-items: center;
-        padding: 0;
-        margin-left: 1rem;
+      margin: 0;
+      margin-right: 4rem;
     }
+  }
 
+  /* NAVIGATION ITEMS */
 
-
-    &__list {
-        display: flex;
+  &__item {
+    list-style-type: none;
+    font-size: 15px;
+    line-height: 32px;
+    color: white;
+    width: 50%;
+    &:hover {
+      border-bottom: 4px solid white;
     }
-    
-    
-
-
-    
-    &__logo {
-        color: white;
-        margin-bottom: .75rem;
-        @include tablet {
-            margin: 0;
-            margin-right: 4rem;
-        }
+    @include tablet {
+      margin: 1rem;
+      margin-right: 2.3rem;
     }
-
-
-/* NAVIGATION ITEMS */
-
-    &__item {
-        list-style-type: none;
-        font-size: 15px;
-        line-height: 32px;
-        color: white;
-        width:50%;
-        &:hover {
-            border-bottom: 4px solid white;
-
-        }
-        @include tablet {
-            margin:1rem;
-            margin-right: 2.3rem;
-
-        }
-        &--active{
-            border-bottom: 4px solid white;
-            font-weight: 600;
-           
-        }
-
+    &--active {
+      border-bottom: 4px solid white;
+      font-weight: 600;
+      width: 100%;
     }
+  }
 }
-
-
-
-
 
 /* FOOTER */
 
 .footer {
+  width: 100%;
+  background-color: #323232;
+  color: white;
 
-    width: 100%;
-    background-color: #323232;
+  padding-left: 1rem;
+  @include tablet {
+    margin-top: 2rem;
+    padding-top: 2rem;
+  }
+
+  @include tablet {
+    position: relative;
+  }
+
+  /* "Get in Touch!" and SOCIAL MEDIA ICONS */
+  &__socials-container {
+    @include tablet {
+      display: flex;
+      margin-bottom: 3rem;
+      margin-left: 2rem;
+    }
+  }
+  &__title {
+    margin: 1rem;
+    padding-top: 3rem;
+
+    @include tablet {
+      padding: 0;
+    }
+  }
+
+  &__logo-container {
+    display: flex;
+    gap: 2rem;
+    margin: 1rem;
+  }
+
+  &__icon {
+    height: 1.44rem;
+  }
+
+  /* CONTACT NAMES AND EMAIL ADDRESS */
+  &__contacts-container {
+    margin: 1rem;
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      margin-left: 2rem;
+      padding-left: 1rem;
+      padding-right: 2rem;
+      padding-bottom: 4rem;
+      @include desktop {
+        padding-bottom: 4rem;
+      }
+    }
+  }
+
+  &__contact-name {
+    font-weight: 600;
+    // margin-bottom: 1rem;
+    width: 15ch;
+  }
+
+  &__contact-line2 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    width: 20ch;
+    margin-top: 0.5rem;
+  }
+  &__contact-company {
+    margin-bottom: 2rem;
+  }
+  &__contact-address {
+    margin-bottom: 0.5rem;
+    width: 22ch;
+  }
+  &__contact-email a {
+    margin-bottom: 0.5rem;
+    text-decoration: none;
     color: white;
+  }
+
+  /* LOGO */
+  &__logo {
+    margin-bottom: 1rem;
+    margin-top: 4rem;
+    margin-left: 1rem;
     @include tablet {
-        margin-top:2rem;
-        padding-top: 2rem;
+      position: absolute;
+      top: 3rem;
+      right: 3rem;
+      margin: 0;
     }
+  }
 
+  /* COPYRIGHT */
+  &__copyright {
+    margin-left: 1rem;
     @include tablet {
-        position: relative;
+      margin-left: 2rem;
+      padding-left: 1rem;
+      padding-bottom: 2rem;
     }
-
-
-/* "Get in Touch!" and SOCIAL MEDIA ICONS */
-    &__socials-container {
-        @include tablet {
-            display: flex;
-            margin-bottom: 3rem;
-            margin-left: 2rem;
-        }
-    }
-    &__title {
-        margin: 1rem;
-        padding-top:3rem;
-        
-        @include tablet {
-            padding: 0;
-        }
-    
-    }
-     
-
-    &__logo-container{
-        display: flex;
-        gap: 2rem;
-        margin: 1rem;
-    }
-
-    &__icon {
-        height: 1.44rem;
-
-    }
-
-
-/* CONTACT NAMES AND EMAIL ADDRESS */    
-    &__contacts-container
-    {
-        margin: 1rem;
-        @include tablet {
-            display: flex;
-            justify-content: space-between;
-            margin-left: 2rem;
-            padding-left: 1rem;
-            padding-right: 2rem;
-            padding-bottom: 4rem;
-            @include desktop {
-                padding-bottom: 4rem;
-            }
-        }
-    }
-    
-    &__contact-name{
-        font-weight: 600;
-        // margin-bottom: 1rem;
-        width: 15ch;}
-
-    &__contact-line2 {
-        font-weight: 600;
-        margin-bottom: 1rem;
-        width: 20ch;
-        margin-top: .5rem;
-    }
-    &__contact-company {
-        margin-bottom: 2rem;
-    }
-    &__contact-address {
-        margin-bottom: .5rem;
-        width: 22ch;
-    }
-    &__contact-email a {
-        margin-bottom: .5rem;
-        text-decoration: none;
-        
-        
-    }
-    
-/* LOGO */
-    &__logo {
-        margin-bottom: 1rem;
-        margin-top: 4rem;
-        margin-left: 1rem;
-        @include tablet {
-            position: absolute;
-            top: 3rem;
-            right: 3rem;
-            margin: 0;
-        }
-
-    }
-
-    /* COPYRIGHT */
-    &__copyright {
-        margin-left: 1rem;
-        @include tablet {
-            margin-left: 2rem;
-            padding-left: 1rem;
-            padding-bottom: 2rem;
-        }
-    }
+  }
 }
-
-
-

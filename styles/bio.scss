@@ -148,22 +148,31 @@
 
 /* COMMENTS FORM */
 
-.comments-header {
-  &__header {
-    font-size: 1.5rem;
-    font-weight: 600;
-  }
+.form-header {
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-left: 1rem;
+  font-size: 1.75rem;
 }
 
-.comments-container {
+.form-container {
   display: flex;
-  margin-top: 3rem;
-  margin-bottom: 6rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
 
+  &__label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #afafaf;
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+  }
   &__avatar {
     height: 3rem;
     width: 3rem;
     border-radius: 50%;
+    margin-left: 1rem;
+    margin-top: 1.2rem;
   }
   &__form {
     display: flex;
@@ -172,22 +181,81 @@
   &__name {
     border: 2px solid #e1e1e1;
     height: 3rem;
-    width: 14rem;
     border-radius: 4px;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
   }
   &__comment {
     border: 2px solid #e1e1e1;
     height: 6rem;
     width: 15rem;
     border-radius: 4px;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
   }
   &__button {
     background-color: #323232;
-    width: 14rem;
+    font-size: 1rem;
     height: 3rem;
     border-radius: 5px;
     color: white;
     font-weight: 600;
     text-transform: uppercase;
+    margin-left: 1rem;
+  }
+}
+
+.comments-container {
+  justify-content: center;
+  &__avatar {
+    height: 3rem;
+    width: 100%;
+    border-radius: 50%;
+    background-color: #e1e1e1;
+    margin-left: 1rem;
+  }
+  &__wrapper {
+    margin-bottom: 1rem;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  &__name {
+    font-weight: 600;
+    color: black;
+    display: flex;
+  }
+  &__date {
+  }
+  &__comment {
+    margin-bottom: 1rem;
+  }
+
+  &__mainwrapper {
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    display: flex;
+    padding-top: 1rem;
+  }
+}
+.comment {
+  &__name {
+    display: flex;
+    margin-bottom: 1rem;
+    font-family: Avenir;
+    font-weight: 600;
+    padding-left: 1rem;
+    font-size: 1rem;
+  }
+  &__date {
+    display: flex;
+    color: #afafaf;
+    font-size: 1rem;
+  }
+  &__comment {
+    padding-left: 1rem;
+    font-weight: 400;
   }
 }

@@ -144,42 +144,46 @@
 
 <!--COMMENT FORM-->
 
-<h1 class="comments-header">Join the Conversation</h1>
-<section class="comments-container">
-<img class="comments-container__avatar"src="/assets/Images/Mohan-muruge.jpg">
-  <form action="./html" id = "form" class="comments-container__form" action="URL" method="POST">
-    <label for="name">Name</label>
+<h1 class="form-header">Join the Conversation</h1>
+<section class="form-container">
+<img class="form-container__avatar"src="/assets/Images/Mohan-muruge.jpg">
+  <form action="./html" id = "form" class="form-container__form" action="URL" method="POST">
+    <label class="form-container__label"for="name">NAME</label>
     <input 
-    class="comments-container__name" 
+    class="form-container__name" 
     type="text" 
     name="Name" 
     placeholder="Enter your name"
-    ><label for="comment">Comment</label>
-      <textarea 
-        class="comments-container__comment"
+    ><label class="form-container__label" for="comment">COMMENT</label>
+      <input 
+        class="form-container__comment"
         type="text"
         name="textarea"
-        placeholder="Add a new comment"></textarea>
-        <button class="comments-container__button"
-        type="button">Comment</button>
+        placeholder="Add a new comment"></input>
+        <button class="form-container__button"
+        type="button">COMMENT</button>
   </form>
 
 </section> 
 
-<div class="comments__list">
-  <img src="">
-  <div class="comments__right">
-    <div class="comments__name-date">
-      <p>Name</p>
-      <p>Date</p>  
-    </div>
-    <div>
-      <p>comments</p>
-    </div>
-  </div>
-     
-  
-</div>
+<ul class="comments-container">
+
+
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <!-- FOOTER -->

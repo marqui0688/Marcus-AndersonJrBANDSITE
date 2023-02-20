@@ -25,7 +25,7 @@ let commentsArray = [
     name: "Miles Acosta",
     date: "12/20/2020",
     comment:
-      "I can t stop listening. Every time I hear one of their songs the vocals it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can t get enough",
+      "I can't stop listening. Every time I hear one of their songs the vocals it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can t get enough",
   },
 ];
 
@@ -34,37 +34,48 @@ let commentsArray = [
 function displayComment() {
   commentsArray.forEach((comment) => {
     //created elements
+    const commentContainer = document.querySelector(".comments-container");
     const commentName = document.createElement("h3");
     const commentDate = document.createElement("p");
     const commentComment = document.createElement("p");
+    const commentWrapper = document.createElement("li");
+    const commentAvatar = document.createElement("avatar");
+    const commentMainWrapper = document.createElement("mainwrapper");
 
     //gave element a classS
     commentName.classList.add("comment__name");
     commentDate.classList.add("comment__date");
     commentComment.classList.add("comment__comment");
+    commentWrapper.classList.add("comments-container__wrapper");
+    commentAvatar.classList.add("comments-container__avatar");
+    commentMainWrapper.classList.add("comments-container__mainwrapper");
 
     //Giving it a value
     commentName.innerText = comment.name;
     commentDate.innerText = comment.date;
     commentComment.innerText = comment.comment;
 
-    //create a tag for list item for each of the comment
-    const commentListItem = document.createElement("p");
-
-    //create a class for the list item//
-    commentListItem.classList.add(".comments__list");
-
     //start appending the child to the parent
 
-    commentListItem.appendChild(commentName);
-    commentListItem.appendChild(commentDate);
-    commentListItem.appendChild(commentComment);
-
-    //Accessing the UL
-    const commentsList = document.querySelector(".comments__list");
-    commentsList.appendChild(commentListItem);
+    commentWrapper.appendChild(commentName);
+    commentWrapper.appendChild(commentDate);
+    commentWrapper.appendChild(commentComment);
+    commentMainWrapper.appendChild(commentAvatar);
+    commentMainWrapper.appendChild(commentWrapper);
+    commentContainer.appendChild(commentMainWrapper);
   });
 }
 
+///Function to replace parameters
+const commentBlock = (el, className, parent, innerText = "") => {
+  const newElement = document.createElement(el);
+
+  newElement.classList.add(className);
+
+  newElement.innerText = innerText;
+
+  return parent.appendChild(newElement);
+};
+
 displayComment();
-//
+//FOR EACH LOOP

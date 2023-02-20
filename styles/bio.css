@@ -8,7 +8,6 @@
 a,
 li {
   text-decoration: none;
-  color: white;
 }
 
 /* HEADER */
@@ -358,43 +357,109 @@ header {
 }
 
 /* COMMENTS FORM */
-.comments-header__header {
+.form-header {
   font-size: 1.5rem;
   font-weight: 600;
+  padding-left: 1rem;
+  font-size: 1.75rem;
 }
 
-.comments-container {
+.form-container {
   display: flex;
-  margin-top: 3rem;
-  margin-bottom: 6rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
 }
-.comments-container__avatar {
+.form-container__label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #afafaf;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+.form-container__avatar {
   height: 3rem;
   width: 3rem;
   border-radius: 50%;
+  margin-left: 1rem;
+  margin-top: 1.2rem;
 }
-.comments-container__form {
+.form-container__form {
   display: flex;
   flex-direction: column;
 }
-.comments-container__name {
+.form-container__name {
   border: 2px solid #e1e1e1;
   height: 3rem;
-  width: 14rem;
   border-radius: 4px;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
 }
-.comments-container__comment {
+.form-container__comment {
   border: 2px solid #e1e1e1;
   height: 6rem;
   width: 15rem;
   border-radius: 4px;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
 }
-.comments-container__button {
+.form-container__button {
   background-color: #323232;
-  width: 14rem;
+  font-size: 1rem;
   height: 3rem;
   border-radius: 5px;
   color: white;
   font-weight: 600;
   text-transform: uppercase;
+  margin-left: 1rem;
+}
+
+.comments-container {
+  justify-content: center;
+}
+.comments-container__avatar {
+  height: 3rem;
+  width: 100%;
+  border-radius: 50%;
+  background-color: #e1e1e1;
+  margin-left: 1rem;
+}
+.comments-container__wrapper {
+  margin-bottom: 1rem;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.comments-container__name {
+  font-weight: 600;
+  color: black;
+  display: flex;
+}
+.comments-container__comment {
+  margin-bottom: 1rem;
+}
+.comments-container__mainwrapper {
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+  display: flex;
+  padding-top: 1rem;
+}
+
+.comment__name {
+  display: flex;
+  margin-bottom: 1rem;
+  font-family: Avenir;
+  font-weight: 600;
+  padding-left: 1rem;
+  font-size: 1rem;
+}
+.comment__date {
+  display: flex;
+  color: #afafaf;
+  font-size: 1rem;
+}
+.comment__comment {
+  padding-left: 1rem;
+  font-weight: 400;
 }/*# sourceMappingURL=bio.css.map */

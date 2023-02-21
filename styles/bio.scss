@@ -2,7 +2,7 @@
 @use "./partials/mixins" as *;
 @use "./partials/typography" as *;
 
- /* HERO */
+/* HERO */
 
 .hero {
   display: flex;
@@ -21,14 +21,13 @@
   }
 
   &__header {
-    padding-left: 16px;
+    padding-left: 2rem;
     color: white;
     font-weight: 600;
   }
 }
 
-
- /* ABOUT */
+/* ABOUT */
 
 .about-container {
   margin: 0 1rem;
@@ -45,11 +44,12 @@
 
   &__img {
     width: 100%;
+    padding-left: 0.8rem;
     @include tablet {
       width: calc(100% - 1rem);
       @include desktop {
         width: calc(90% - 2rem);
-      padding-left: 5rem;
+        padding-left: 5rem;
       }
     }
   }
@@ -58,14 +58,14 @@
     font-weight: 600;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    font-size: 17px;
+    font-size: 1.0625rem;
     line-height: 1.5rem;
+    padding-left: 1rem;
     @include tablet {
       margin-left: 0.75rem;
       @include desktop {
         padding-left: 4rem;
         padding-bottom: 2rem;
-;
       }
     }
   }
@@ -81,6 +81,7 @@
     margin-bottom: 1rem;
     font-size: 1.2rem;
     font-weight: 600;
+    padding-left: 1rem;
     @include tablet {
       font-size: 2rem;
       font-weight: 700;
@@ -92,6 +93,7 @@
   }
   &__bio {
     margin-bottom: 1rem;
+    padding-left: 1rem;
     @include tablet {
       padding-left: 2.5rem;
       padding-right: 1.5rem;
@@ -112,23 +114,22 @@
   }
 }
 
-
-
 /* GALLERY */
 
 .gallery-header {
-  padding-left: 1rem;
+  padding-left: 2rem;
   @include tablet {
     padding-left: 3rem;
     @include desktop {
-          padding-left: 1.5rem;
+      padding-left: 1.5rem;
     }
   }
 }
 
 .gallery-container {
   margin: 0;
-  padding: 1rem 1rem 1rem 1rem;
+  padding: 1rem 1rem 1rem 2rem;
+  background-color: #fafafa;
   @include tablet {
     display: flex;
     flex-wrap: wrap;
@@ -146,5 +147,168 @@
       padding: 0.5rem;
       margin-top: 0;
     }
+  }
+}
+
+/* COMMENTS FORM */
+
+.form-header {
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-left: 2rem;
+  font-size: 1.75rem;
+  @include tablet {
+    padding-left: 2rem;
+    margin-top: 3rem;
+    font-size: 2.5rem;
+  }
+}
+
+.form-container {
+  display: flex;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1rem;
+  @include tablet {
+    margin-left: 5.5rem;
+  }
+  @include desktop {
+    width: 45%;
+    margin-left: 16rem;
+  }
+
+  &__label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #afafaf;
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  &__avatar {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    margin-left: 1rem;
+    margin-top: 1.2rem;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @include tablet {
+      padding-right: 5rem;
+    }
+  }
+  &__name {
+    border: 2px solid #e1e1e1;
+    height: 3rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+
+    @include tablet {
+      width: 100%;
+    }
+  }
+  &__comment {
+    border: 2px solid #e1e1e1;
+    height: 6rem;
+
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    @include tablet {
+      width: 100%;
+    }
+  }
+  &__button {
+    background-color: #323232;
+    font-size: 1rem;
+    height: 3rem;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-left: 1rem;
+    border-color: #323232;
+
+    @include tablet {
+      width: 40%;
+      margin: 1rem 0 1rem 21rem;
+    }
+  }
+}
+
+.comments-container {
+  justify-content: center;
+  @include tablet {
+    margin: 0rem 4rem 0rem 5rem;
+  }
+  @include desktop {
+    width: 50%;
+    margin: 0rem 4rem 0rem 12rem;
+  }
+  &__avatar {
+    height: 3rem;
+    width: 14rem;
+    border-radius: 50%;
+    background-color: #e1e1e1;
+    margin-left: 1rem;
+
+    @include tablet {
+      width: 20%;
+      margin-left: 6rem;
+    }
+  }
+  &__mainwrapper {
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    display: flex;
+    padding-top: 1rem;
+    list-style-type: none;
+    position: relative;
+    padding-left: 1rem;
+    &__wrapper {
+      margin-bottom: 1rem;
+      justify-content: space-between;
+      margin-top: 0.5rem;
+      display: inline-flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__name {
+    font-weight: 600;
+    color: black;
+    display: flex;
+  }
+
+  &__comment {
+    margin-bottom: 1rem;
+  }
+}
+
+.comment {
+  &__name {
+    display: flex;
+    margin-bottom: 1rem;
+    font-family: Avenir;
+    font-weight: 600;
+    padding-left: 1rem;
+    font-size: 1rem;
+  }
+  &__date {
+    color: #afafaf;
+    font-size: 1rem;
+    position: absolute;
+    right: 2rem;
+    top: 1rem;
+    right: 0.5rem;
+  }
+  &__comment {
+    padding-left: 1rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
   }
 }

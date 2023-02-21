@@ -5,7 +5,15 @@
   font-weight: 400;
 }
 
+<<<<<<< HEAD
 /* HEADER */
+=======
+a,
+li {
+  text-decoration: none;
+}
+
+>>>>>>> sprint-2
 header {
   flex-direction: column;
   width: 100%;
@@ -15,21 +23,39 @@ header {
   padding-top: 1rem;
 }
 
+<<<<<<< HEAD
 /* NAVIGATION BAR */
 .navigation {
   text-align: center;
   /* NAVIGATION ITEMS */
+=======
+.navigation {
+  text-align: center;
+>>>>>>> sprint-2
 }
 @media (min-width: 768px) {
   .navigation {
     display: flex;
     align-items: center;
     padding: 0;
+<<<<<<< HEAD
     margin-left: 1rem;
+=======
+    margin-left: 2.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .navigation {
+    margin-left: 7rem;
+>>>>>>> sprint-2
   }
 }
 .navigation__list {
   display: flex;
+<<<<<<< HEAD
+=======
+  justify-content: space-around;
+>>>>>>> sprint-2
 }
 .navigation__logo {
   color: white;
@@ -60,17 +86,32 @@ header {
 .navigation__item--active {
   border-bottom: 4px solid white;
   font-weight: 600;
+<<<<<<< HEAD
 }
 
 /* FOOTER */
+=======
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .navigation__item--active {
+    width: 60%;
+  }
+}
+
+>>>>>>> sprint-2
 .footer {
   width: 100%;
   background-color: #323232;
   color: white;
+<<<<<<< HEAD
   /* "Get in Touch!" and SOCIAL MEDIA ICONS */
   /* CONTACT NAMES AND EMAIL ADDRESS */
   /* LOGO */
   /* COPYRIGHT */
+=======
+  padding-left: 1rem;
+>>>>>>> sprint-2
 }
 @media (min-width: 768px) {
   .footer {
@@ -79,6 +120,7 @@ header {
   }
 }
 @media (min-width: 768px) {
+<<<<<<< HEAD
   .footer {
     position: relative;
   }
@@ -88,6 +130,12 @@ header {
     display: flex;
     margin-bottom: 3rem;
     margin-left: 2rem;
+=======
+  .footer__socials-container {
+    display: flex;
+    margin-bottom: 3rem;
+    align-items: center;
+>>>>>>> sprint-2
   }
 }
 .footer__title {
@@ -99,14 +147,34 @@ header {
     padding: 0;
   }
 }
+<<<<<<< HEAD
+=======
+@media (min-width: 1280px) {
+  .footer__title {
+    padding-left: 5rem;
+  }
+}
+>>>>>>> sprint-2
 .footer__logo-container {
   display: flex;
   gap: 2rem;
   margin: 1rem;
 }
+<<<<<<< HEAD
 .footer__icon {
   height: 1.44rem;
 }
+=======
+@media (min-width: 1280px) {
+  .footer__logo-container {
+    padding-left: 5rem;
+  }
+}
+.footer__icon {
+  height: 1.44rem;
+}
+
+>>>>>>> sprint-2
 .footer__contacts-container {
   margin: 1rem;
 }
@@ -114,6 +182,7 @@ header {
   .footer__contacts-container {
     display: flex;
     justify-content: space-between;
+<<<<<<< HEAD
     margin-left: 2rem;
     padding-left: 1rem;
     padding-right: 2rem;
@@ -129,12 +198,38 @@ header {
   font-weight: 600;
   width: 15ch;
 }
+=======
+    padding-right: 2rem;
+    padding-bottom: 4rem;
+    align-items: center;
+  }
+}
+@media (min-width: 1280px) {
+  .footer__contacts-container {
+    padding-bottom: 4rem;
+    justify-content: space-around;
+    padding-right: 6rem;
+  }
+}
+
+.footer__contact-company {
+  margin-bottom: 2rem;
+}
+
+.footer__contact-name {
+  font-weight: 600;
+  width: 15ch;
+  margin-top: 2rem;
+}
+
+>>>>>>> sprint-2
 .footer__contact-line2 {
   font-weight: 600;
   margin-bottom: 1rem;
   width: 20ch;
   margin-top: 0.5rem;
 }
+<<<<<<< HEAD
 .footer__contact-company {
   margin-bottom: 2rem;
 }
@@ -146,6 +241,20 @@ header {
   margin-bottom: 0.5rem;
   text-decoration: none;
 }
+=======
+
+.footer__contact-address {
+  margin-bottom: 2rem;
+  width: 22ch;
+}
+
+.footer__contact-email {
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+  color: white;
+}
+
+>>>>>>> sprint-2
 .footer__logo {
   margin-bottom: 1rem;
   margin-top: 4rem;
@@ -159,16 +268,31 @@ header {
     margin: 0;
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> sprint-2
 .footer__copyright {
   margin-left: 1rem;
 }
 @media (min-width: 768px) {
   .footer__copyright {
+<<<<<<< HEAD
     margin-left: 2rem;
     padding-left: 1rem;
     padding-bottom: 2rem;
   }
 }
+=======
+    padding-bottom: 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  .footer__copyright {
+    margin-left: 6rem;
+  }
+}
+>>>>>>> sprint-2
 
 @font-face {
   font-family: "Avenir";

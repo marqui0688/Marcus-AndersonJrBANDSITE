@@ -2,6 +2,7 @@
 @use "./partials/mixins" as *;
 @use "./partials/typography" as *;
 
+////////**HERO**///////////////
 .hero {
   display: flex;
   background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
@@ -14,9 +15,12 @@
   position: relative;
 
   @include tablet {
-    height: 80vh;
+    height: 105vh;
     font-size: 4rem;
     // padding-left: 7rem;
+    @include tablet {
+      height: 90vh;
+    }
   }
   &__subheader {
     padding-left: 16px;
@@ -26,7 +30,15 @@
     top: 5rem;
     font-size: 1.7rem;
     @include tablet {
-      font-size: 1.5rem;
+      font-size: 4rem;
+      margin-left: 1.5rem;
+      margin-top: 3rem;
+      @include desktop {
+        font-size: 4rem;
+        margin-left: 5.5rem;
+        margin-top: 9rem;
+        width: 14ch;
+      }
     }
   }
   &__miniheader {
@@ -34,6 +46,16 @@
     position: absolute;
     top: 1rem;
     margin-left: 1rem;
+    @include tablet {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-left: 2.5rem;
+      margin-top: 4rem;
+      @include desktop {
+        margin-left: 7rem;
+        margin-top: 9rem;
+      }
+    }
   }
 }
 
@@ -44,14 +66,33 @@
   display: block;
   position: absolute;
   bottom: 2rem;
+  @include tablet {
+    width: 70%;
+    height: 10rem;
+    margin-left: 3rem;
+    display: block;
+    position: absolute;
+    bottom: 7rem;
+    @include desktop {
+      width: 40%;
+      bottom: 25rem;
+      right: 5rem;
+    }
+  }
 }
-
+////////***SHOWS***///////////
 .shows-container {
   display: flex;
   flex-direction: column;
   list-style-type: none;
+  @include tablet {
+    list-style-type: none;
+  }
   &__list {
     display: flex;
+    @include tablet {
+      display: contents;
+    }
   }
 
   &__title {
@@ -60,6 +101,10 @@
     margin-left: 1rem;
     margin-top: 3rem;
     font-size: 1.75rem;
+    @include desktop {
+      margin-left: 8rem;
+      font-size: 2rem;
+    }
   }
 }
 
@@ -92,6 +137,9 @@
   font-weight: 600;
   text-transform: uppercase;
   width: 90%;
+  @include tablet {
+    width: 30%;
+  }
   margin-left: 1rem;
 }
 
@@ -102,10 +150,15 @@
   &:hover {
     border: 4px solid rgb(226, 74, 234);
   }
-
-  // &--active {
-  //   border-bottom: 4px solid rgb(226, 74, 234);
-  // }
+  @include tablet {
+    display: flex;
+  }
+  @include desktop {
+    margin-left: 17rem;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 2rem;
+  }
 }
 .shows__date-text {
   font-weight: 600;
@@ -113,12 +166,18 @@
   padding-bottom: 1.5rem;
   font-size: 1rem;
   margin-left: 1rem;
+  @include tablet {
+    margin-left: 0;
+  }
 }
 .shows__name-text {
   padding-top: 0.5rem;
   padding-bottom: 1.5rem;
   font-size: 1rem;
   margin-left: 1rem;
+  @include tablet {
+    margin-left: 0;
+  }
 }
 .shows__location-text {
   padding-top: 0.5rem;
@@ -127,6 +186,9 @@
   margin-left: 1rem;
 
   &--active {
+    border-bottom: 4px solid rgb(226, 74, 234);
+  }
+  &:hover {
     border-bottom: 4px solid rgb(226, 74, 234);
   }
 }

@@ -19,17 +19,20 @@ header {
   padding-top: 1rem;
 }
 
-/* NAVIGATION BAR */
 .navigation {
   text-align: center;
-  /* NAVIGATION ITEMS */
 }
 @media (min-width: 768px) {
   .navigation {
     display: flex;
     align-items: center;
     padding: 0;
-    margin-left: 1rem;
+    margin-left: 2.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .navigation {
+    margin-left: 7rem;
   }
 }
 .navigation__list {
@@ -69,7 +72,7 @@ header {
 }
 @media (min-width: 768px) {
   .navigation__item--active {
-    width: 50%;
+    width: 60%;
   }
 }
 
@@ -106,20 +109,27 @@ header {
     padding: 0;
   }
 }
+@media (min-width: 1280px) {
+  .footer__title {
+    padding-left: 5rem;
+  }
+}
 .footer__logo-container {
   display: flex;
   gap: 2rem;
   margin: 1rem;
 }
+@media (min-width: 1280px) {
+  .footer__logo-container {
+    padding-left: 5rem;
+  }
+}
 .footer__icon {
   height: 1.44rem;
 }
 
-/* CONTACT NAMES AND EMAIL ADDRESS */
 .footer__contacts-container {
   margin: 1rem;
-  /* LOGO */
-  /* COPYRIGHT */
 }
 @media (min-width: 768px) {
   .footer__contacts-container {
@@ -133,50 +143,64 @@ header {
 @media (min-width: 1280px) {
   .footer__contacts-container {
     padding-bottom: 4rem;
+    justify-content: space-around;
+    padding-right: 6rem;
   }
 }
-.footer__contacts-container__contact-name {
+
+.footer__contact-company {
+  margin-bottom: 2rem;
+}
+
+.footer__contact-name {
   font-weight: 600;
   width: 15ch;
   margin-top: 2rem;
 }
-.footer__contacts-container__contact-line2 {
+
+.footer__contact-line2 {
   font-weight: 600;
   margin-bottom: 1rem;
   width: 20ch;
   margin-top: 0.5rem;
 }
-.footer__contacts-container__contact-company {
-  margin-bottom: 2rem;
-}
-.footer__contacts-container__contact-address {
+
+.footer__contact-address {
   margin-bottom: 2rem;
   width: 22ch;
 }
-.footer__contacts-container__contact-email {
+
+.footer__contact-email {
   margin-bottom: 0.5rem;
   text-decoration: none;
   color: white;
 }
-.footer__contacts-container__logo {
+
+.footer__logo {
   margin-bottom: 1rem;
   margin-top: 4rem;
   margin-left: 1rem;
 }
 @media (min-width: 768px) {
-  .footer__contacts-container__logo {
+  .footer__logo {
     position: absolute;
     top: 3rem;
     right: 3rem;
     margin: 0;
   }
 }
-.footer__contacts-container__copyright {
+
+.footer__copyright {
   margin-left: 1rem;
 }
 @media (min-width: 768px) {
-  .footer__contacts-container__copyright {
+  .footer__copyright {
     padding-bottom: 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  .footer__copyright {
+    margin-left: 6rem;
   }
 }
 

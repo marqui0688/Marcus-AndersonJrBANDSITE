@@ -25,7 +25,7 @@ header {
   padding-top: 1rem;
 }
 
-/* NAVIGATION BAR */
+///////////* NAVIGATION BAR *//////////
 .navigation {
   text-align: center;
 
@@ -33,9 +33,11 @@ header {
     display: flex;
     align-items: center;
     padding: 0;
-    margin-left: 1rem;
+    margin-left: 2.5rem;
   }
-
+  @include desktop {
+    margin-left: 7rem;
+  }
   &__list {
     display: flex;
     justify-content: space-around;
@@ -51,7 +53,7 @@ header {
     }
   }
 
-  /* NAVIGATION ITEMS */
+  //////////* NAVIGATION ITEMS */////////
 
   &__item {
     list-style-type: none;
@@ -75,7 +77,7 @@ header {
       width: 100%;
 
       @include tablet {
-        width: 50%;
+        width: 60%;
       }
     }
   }
@@ -98,7 +100,7 @@ header {
     position: relative;
   }
 
-  ///////////* "Get in Touch!" and SOCIAL MEDIA ICONS *///////
+  ///////////////* "Get in Touch!" and SOCIAL MEDIA ICONS */////////////
   &__socials-container {
     @include tablet {
       display: flex;
@@ -114,19 +116,26 @@ header {
     @include tablet {
       padding: 0;
     }
+    @include desktop {
+      padding-left: 5rem;
+    }
   }
 
   &__logo-container {
     display: flex;
     gap: 2rem;
     margin: 1rem;
+    @include desktop {
+      padding-left: 5rem;
+    }
   }
 
   &__icon {
     height: 1.44rem;
   }
 }
-/* CONTACT NAMES AND EMAIL ADDRESS */
+//////////////* FOOTER CONTACTS /////////////
+
 .footer__contacts-container {
   margin: 1rem;
 
@@ -140,54 +149,54 @@ header {
 
   @include desktop {
     padding-bottom: 4rem;
+    justify-content: space-around;
+    padding-right: 6rem;
   }
+}
 
-  &__contact-name {
-    font-weight: 600;
-    width: 15ch;
-    margin-top: 2rem;
+.footer__contact-company {
+  margin-bottom: 2rem;
+}
+.footer__contact-name {
+  font-weight: 600;
+  width: 15ch;
+  margin-top: 2rem;
+}
+.footer__contact-line2 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  width: 20ch;
+  margin-top: 0.5rem;
+}
+.footer__contact-address {
+  margin-bottom: 2rem;
+  width: 22ch;
+}
+.footer__contact-email {
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+  color: white;
+}
+
+////////////////* LOGO *//////////////////////
+.footer__logo {
+  margin-bottom: 1rem;
+  margin-top: 4rem;
+  margin-left: 1rem;
+  @include tablet {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    margin: 0;
   }
-
-  &__contact-line2 {
-    font-weight: 600;
-    margin-bottom: 1rem;
-    width: 20ch;
-    margin-top: 0.5rem;
+}
+/////////////////* COPYRIGHT */////////////////////
+.footer__copyright {
+  margin-left: 1rem;
+  @include tablet {
+    padding-bottom: 2rem;
   }
-
-  &__contact-company {
-    margin-bottom: 2rem;
-  }
-
-  &__contact-address {
-    margin-bottom: 2rem;
-    width: 22ch;
-  }
-
-  &__contact-email {
-    margin-bottom: 0.5rem;
-    text-decoration: none;
-    color: white;
-  }
-
-  /* LOGO */
-  &__logo {
-    margin-bottom: 1rem;
-    margin-top: 4rem;
-    margin-left: 1rem;
-    @include tablet {
-      position: absolute;
-      top: 3rem;
-      right: 3rem;
-      margin: 0;
-    }
-  }
-
-  /* COPYRIGHT */
-  &__copyright {
-    margin-left: 1rem;
-    @include tablet {
-      padding-bottom: 2rem;
-    }
+  @include desktop {
+    margin-left: 6rem;
   }
 }

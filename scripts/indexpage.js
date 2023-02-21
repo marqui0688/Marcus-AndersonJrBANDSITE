@@ -89,7 +89,7 @@ form.addEventListener("submit", (event) => {
     comment: event.target.comment.value.trim(),
   };
 
-  commentsArray.push(newComment);
+  commentsArray.unshift(newComment);
 
   form.reset();
 

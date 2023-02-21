@@ -198,10 +198,11 @@ header {
   display: flex;
   background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("/assets/Images/Photo-gallery-3.jpg");
   width: 100%;
-  height: 50vh;
+  height: 55vh;
   background-position: center;
   background-size: cover;
   align-items: center;
+  position: relative;
 }
 @media (min-width: 768px) {
   .hero {
@@ -213,14 +214,106 @@ header {
   padding-left: 16px;
   color: white;
   font-weight: 600;
+  position: absolute;
+  top: 5rem;
+  font-size: 1.7rem;
 }
 .hero__miniheader {
   color: white;
   position: absolute;
-  top: 7rem;
+  top: 1rem;
+  margin-left: 1rem;
 }
 
 .iframe {
-  width: 70%;
-  height: 5rem;
+  width: 90%;
+  height: 7rem;
+  margin-left: 1rem;
+  display: block;
+  position: absolute;
+  bottom: 2rem;
+}
+
+.shows-container {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+}
+.shows-container__list {
+  display: flex;
+}
+.shows-container__title {
+  font-weight: 600;
+  font-size: 2rem;
+  margin-left: 1rem;
+  margin-top: 3rem;
+  font-size: 1.75rem;
+}
+
+.shows__date {
+  display: inline;
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: #afafaf;
+  margin-left: 1rem;
+}
+
+.shows__venue {
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: #afafaf;
+  margin-left: 1rem;
+}
+
+.shows__location {
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: #afafaf;
+  margin-left: 1rem;
+}
+
+.shows__button {
+  margin-bottom: 2rem;
+  background-color: #323232;
+  font-size: 1rem;
+  height: 3rem;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  width: 90%;
+  margin-left: 1rem;
+}
+
+.shows__list-item {
+  border-bottom: 1px solid #e1e1e1;
+  margin-top: 2rem;
+}
+.shows__list-item:hover {
+  border: 4px solid rgb(226, 74, 234);
+}
+.shows__list-item:hover--active {
+  border-bottom: 4px solid rgb(226, 74, 234);
+}
+
+.shows__date-text {
+  font-weight: 600;
+  padding-top: 0.5rem;
+  padding-bottom: 1.5rem;
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+
+.shows__name-text {
+  padding-top: 0.5rem;
+  padding-bottom: 1.5rem;
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+
+.shows__location-text {
+  padding-top: 0.5rem;
+  padding-bottom: 1.5rem;
+  font-size: 1rem;
+  margin-left: 1rem;
 }/*# sourceMappingURL=shows.css.map */

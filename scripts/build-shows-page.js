@@ -1,4 +1,4 @@
-//Establishing constants for Bios form//
+//Establishing constants for Shows page//
 const form = document.querySelector("form");
 const button = document.querySelector("button");
 
@@ -41,12 +41,13 @@ let showsArray = [
   },
 ];
 
-///Creates function to have an array of objects already on the page (auto displays comments)
+///Creates function to have an array of objects already on the page (auto displays shows)
 
-function displayComment() {
+function displayShow() {
+  const showsContainer = document.querySelector(".shows-container");
   showsArray.forEach((show) => {
     //created elements
-    const showsContainer = document.querySelector(".shows-container");
+
     const showsListItem = document.createElement("li");
     const showsDate = document.createElement("h3");
     const showsDateValue = document.createElement("p");
@@ -57,13 +58,14 @@ function displayComment() {
     const showsButton = document.createElement("button");
 
     //gave element a classS
-    commentName.classList.add("comment__name");
-    commentDate.classList.add("comment__date");
-    commentComment.classList.add("comment__comment");
-    commentWrapper.classList.add("comments-container__wrapper");
-    commentAvatar.classList.add("comments-container__avatar");
-    commentMainWrapper.classList.add("comments-container__mainwrapper");
-
+    showsDate.classList.add("shows__date");
+    showsVenue.classList.add("shows__venue");
+    showsLocation.classList.add("shows__location");
+    showsButton.classList.add("shows__button");
+    showsListItem.classList.add("shows__list-item");
+    showsDateValue.classList.add("shows__date-text");
+    showsVenueValue.classList.add("shows__name-text");
+    showsLocationValue.classList.add("shows__location-text");
     //Giving it a value
     showsDate.innerText = "DATE";
     showsDateValue.innerText = show.date;
@@ -76,12 +78,15 @@ function displayComment() {
     //start appending the child to the parent
 
     showsListItem.appendChild(showsDate);
-    showsListItem.appendChild(showsVenue);
-    showsListItem.appendChild(showsLocation);
     showsListItem.appendChild(showsDateValue);
+    showsListItem.appendChild(showsVenue);
     showsListItem.appendChild(showsVenueValue);
+    showsListItem.appendChild(showsLocation);
     showsListItem.appendChild(showsLocationValue);
     showsListItem.appendChild(showsButton);
+
     showsContainer.appendChild(showsListItem);
   });
 }
+
+displayShow();

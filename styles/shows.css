@@ -89,11 +89,6 @@ header {
   }
 }
 @media (min-width: 768px) {
-  .footer {
-    position: relative;
-  }
-}
-@media (min-width: 768px) {
   .footer__socials-container {
     display: flex;
     margin-bottom: 3rem;
@@ -245,8 +240,9 @@ header {
   color: white;
   font-weight: 600;
   position: absolute;
-  top: 5rem;
-  font-size: 1.7rem;
+  top: 4rem;
+  font-size: 1.4rem;
+  width: 17ch;
 }
 @media (min-width: 768px) {
   .hero__subheader {
@@ -259,7 +255,7 @@ header {
   .hero__subheader {
     font-size: 4rem;
     margin-left: 5.5rem;
-    margin-top: 9rem;
+    margin-top: 16rem;
     width: 14ch;
   }
 }
@@ -280,13 +276,14 @@ header {
 @media (min-width: 768px) and (min-width: 1280px) {
   .hero__miniheader {
     margin-left: 7rem;
-    margin-top: 9rem;
+    margin-top: 16rem;
+    font-size: 1.8rem;
   }
 }
 
 .iframe {
   width: 90%;
-  height: 7rem;
+  height: 6rem;
   margin-left: 1rem;
   display: block;
   position: absolute;
@@ -299,7 +296,7 @@ header {
     margin-left: 3rem;
     display: block;
     position: absolute;
-    bottom: 7rem;
+    bottom: 4rem;
   }
 }
 @media (min-width: 768px) and (min-width: 1280px) {

@@ -96,10 +96,6 @@ header {
     padding-top: 2rem;
   }
 
-  @include tablet {
-    position: relative;
-  }
-
   ///////////////* "Get in Touch!" and SOCIAL MEDIA ICONS */////////////
   &__socials-container {
     @include tablet {

@@ -89,11 +89,6 @@ header {
   }
 }
 @media (min-width: 768px) {
-  .footer {
-    position: relative;
-  }
-}
-@media (min-width: 768px) {
   .footer__socials-container {
     display: flex;
     margin-bottom: 3rem;
@@ -236,7 +231,7 @@ header {
   }
 }
 .hero__header {
-  padding-left: 16px;
+  padding-left: 2rem;
   color: white;
   font-weight: 600;
 }
@@ -258,6 +253,7 @@ header {
 }
 .about-container__img {
   width: 100%;
+  padding-left: 0.8rem;
 }
 @media (min-width: 768px) {
   .about-container__img {
@@ -276,6 +272,7 @@ header {
   margin-bottom: 1rem;
   font-size: 1.0625rem;
   line-height: 1.5rem;
+  padding-left: 1rem;
 }
 @media (min-width: 768px) {
   .about-container__subheader {
@@ -300,6 +297,7 @@ header {
   margin-bottom: 1rem;
   font-size: 1.2rem;
   font-weight: 600;
+  padding-left: 1rem;
 }
 @media (min-width: 768px) {
   .about-container__band {
@@ -315,6 +313,7 @@ header {
 }
 .about-container__bio {
   margin-bottom: 1rem;
+  padding-left: 1rem;
 }
 @media (min-width: 768px) {
   .about-container__bio {
@@ -338,7 +337,7 @@ header {
 
 /* GALLERY */
 .gallery-header {
-  padding-left: 1rem;
+  padding-left: 2rem;
 }
 @media (min-width: 768px) {
   .gallery-header {
@@ -353,7 +352,7 @@ header {
 
 .gallery-container {
   margin: 0;
-  padding: 1rem 1rem 1rem 1rem;
+  padding: 1rem 1rem 1rem 2rem;
   background-color: #fafafa;
 }
 @media (min-width: 768px) {
@@ -385,7 +384,7 @@ header {
 .form-header {
   font-size: 1.5rem;
   font-weight: 600;
-  padding-left: 1rem;
+  padding-left: 2rem;
   font-size: 1.75rem;
 }
 @media (min-width: 768px) {
@@ -400,10 +399,17 @@ header {
   display: flex;
   margin-top: 2rem;
   margin-bottom: 1.5rem;
+  padding-left: 1rem;
 }
 @media (min-width: 768px) {
   .form-container {
     margin-left: 5.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .form-container {
+    width: 45%;
+    margin-left: 16rem;
   }
 }
 .form-container__label {
@@ -480,6 +486,12 @@ header {
     margin: 0rem 4rem 0rem 5rem;
   }
 }
+@media (min-width: 1280px) {
+  .comments-container {
+    width: 50%;
+    margin: 0rem 4rem 0rem 12rem;
+  }
+}
 .comments-container__avatar {
   height: 3rem;
   width: 14rem;
@@ -500,6 +512,7 @@ header {
   padding-top: 1rem;
   list-style-type: none;
   position: relative;
+  padding-left: 1rem;
 }
 .comments-container__mainwrapper__wrapper {
   margin-bottom: 1rem;

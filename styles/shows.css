@@ -10,7 +10,6 @@ li {
   text-decoration: none;
 }
 
-/* HEADER */
 header {
   flex-direction: column;
   width: 100%;
@@ -68,17 +67,17 @@ header {
   font-weight: 600;
   width: 100%;
 }
+@media (min-width: 768px) {
+  .navigation__item--active {
+    width: 50%;
+  }
+}
 
-/* FOOTER */
 .footer {
   width: 100%;
   background-color: #323232;
   color: white;
   padding-left: 1rem;
-  /* "Get in Touch!" and SOCIAL MEDIA ICONS */
-  /* CONTACT NAMES AND EMAIL ADDRESS */
-  /* LOGO */
-  /* COPYRIGHT */
 }
 @media (min-width: 768px) {
   .footer {
@@ -95,7 +94,7 @@ header {
   .footer__socials-container {
     display: flex;
     margin-bottom: 3rem;
-    margin-left: 2rem;
+    align-items: center;
   }
 }
 .footer__title {
@@ -115,66 +114,68 @@ header {
 .footer__icon {
   height: 1.44rem;
 }
+
+/* CONTACT NAMES AND EMAIL ADDRESS */
 .footer__contacts-container {
   margin: 1rem;
+  /* LOGO */
+  /* COPYRIGHT */
 }
 @media (min-width: 768px) {
   .footer__contacts-container {
     display: flex;
     justify-content: space-between;
-    margin-left: 2rem;
-    padding-left: 1rem;
     padding-right: 2rem;
     padding-bottom: 4rem;
+    align-items: center;
   }
 }
-@media (min-width: 768px) and (min-width: 1280px) {
+@media (min-width: 1280px) {
   .footer__contacts-container {
     padding-bottom: 4rem;
   }
 }
-.footer__contact-name {
+.footer__contacts-container__contact-name {
   font-weight: 600;
   width: 15ch;
+  margin-top: 2rem;
 }
-.footer__contact-line2 {
+.footer__contacts-container__contact-line2 {
   font-weight: 600;
   margin-bottom: 1rem;
   width: 20ch;
   margin-top: 0.5rem;
 }
-.footer__contact-company {
+.footer__contacts-container__contact-company {
   margin-bottom: 2rem;
 }
-.footer__contact-address {
-  margin-bottom: 0.5rem;
+.footer__contacts-container__contact-address {
+  margin-bottom: 2rem;
   width: 22ch;
 }
-.footer__contact-email a {
+.footer__contacts-container__contact-email {
   margin-bottom: 0.5rem;
   text-decoration: none;
   color: white;
 }
-.footer__logo {
+.footer__contacts-container__logo {
   margin-bottom: 1rem;
   margin-top: 4rem;
   margin-left: 1rem;
 }
 @media (min-width: 768px) {
-  .footer__logo {
+  .footer__contacts-container__logo {
     position: absolute;
     top: 3rem;
     right: 3rem;
     margin: 0;
   }
 }
-.footer__copyright {
+.footer__contacts-container__copyright {
   margin-left: 1rem;
 }
 @media (min-width: 768px) {
-  .footer__copyright {
-    margin-left: 2rem;
-    padding-left: 1rem;
+  .footer__contacts-container__copyright {
     padding-bottom: 2rem;
   }
 }
@@ -217,6 +218,11 @@ header {
   position: absolute;
   top: 5rem;
   font-size: 1.7rem;
+}
+@media (min-width: 768px) {
+  .hero__subheader {
+    font-size: 1.5rem;
+  }
 }
 .hero__miniheader {
   color: white;
@@ -292,9 +298,6 @@ header {
 .shows__list-item:hover {
   border: 4px solid rgb(226, 74, 234);
 }
-.shows__list-item:hover--active {
-  border-bottom: 4px solid rgb(226, 74, 234);
-}
 
 .shows__date-text {
   font-weight: 600;
@@ -316,4 +319,7 @@ header {
   padding-bottom: 1.5rem;
   font-size: 1rem;
   margin-left: 1rem;
+}
+.shows__location-text--active {
+  border-bottom: 4px solid rgb(226, 74, 234);
 }/*# sourceMappingURL=shows.css.map */

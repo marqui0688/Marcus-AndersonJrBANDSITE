@@ -13,7 +13,7 @@ li {
   text-decoration: none;
 }
 
-/* HEADER */
+//////////////* HEADER *//////////////
 
 header {
   // display: flex;
@@ -22,13 +22,13 @@ header {
   background-color: #323232;
   position: sticky;
   justify-content: center;
-
   padding-top: 1rem;
 }
 
 /* NAVIGATION BAR */
 .navigation {
   text-align: center;
+
   @include tablet {
     display: flex;
     align-items: center;
@@ -44,6 +44,7 @@ header {
   &__logo {
     color: white;
     margin-bottom: 0.75rem;
+
     @include tablet {
       margin: 0;
       margin-right: 4rem;
@@ -58,19 +59,23 @@ header {
     line-height: 32px;
     color: white;
     width: 50%;
+
     &:hover {
       border-bottom: 4px solid white;
     }
+
     @include tablet {
       margin: 1rem;
       margin-right: 2.3rem;
     }
+
     &--active {
       border-bottom: 4px solid white;
       font-weight: 600;
       width: 100%;
+
       @include tablet {
-        width: 70%;
+        width: 50%;
       }
     }
   }
@@ -82,8 +87,8 @@ header {
   width: 100%;
   background-color: #323232;
   color: white;
-
   padding-left: 1rem;
+
   @include tablet {
     margin-top: 2rem;
     padding-top: 2rem;
@@ -120,71 +125,49 @@ header {
   &__icon {
     height: 1.44rem;
   }
+}
+/* CONTACT NAMES AND EMAIL ADDRESS */
+.footer__contacts-container {
+  margin: 1rem;
 
-  /* CONTACT NAMES AND EMAIL ADDRESS */
-  .footer__contacts-container {
-    margin: 1rem;
-    @include tablet {
-      display: flex;
-      justify-content: space-between;
-      padding-right: 2rem;
-      padding-bottom: 4rem;
-      align-items: center;
-      @include desktop {
-        padding-bottom: 4rem;
-      }
-      &__contact-name {
-        font-weight: 600;
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 2rem;
+    padding-bottom: 4rem;
+    align-items: center;
+  }
 
-        width: 15ch;
-        margin-top: 2rem;
-      }
+  @include desktop {
+    padding-bottom: 4rem;
+  }
 
-      &__contact-line2 {
-        font-weight: 600;
-        margin-bottom: 1rem;
-        width: 20ch;
-        margin-top: 0.5rem;
-      }
-      &__contact-company {
-        margin-bottom: 2rem;
-      }
-      &__contact-address {
-        margin-bottom: 2rem;
-        width: 22ch;
-      }
-      &__contact-email {
-        margin-bottom: 0.5rem;
-        text-decoration: none;
-        color: white;
-      }
-    }
+  &__contact-name {
+    font-weight: 600;
+    width: 15ch;
+    margin-top: 2rem;
+  }
 
-    // &__contact-name {
-    //   font-weight: 600;
-    //   // margin-bottom: 1rem;
-    //   width: 15ch;
-    //   margin-top: 2rem;
-    // }
+  &__contact-line2 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    width: 20ch;
+    margin-top: 0.5rem;
+  }
 
-    // &__contact-line2 {
-    //   font-weight: 600;
-    //   margin-bottom: 1rem;
-    //   width: 20ch;
-    //   margin-top: 0.5rem;
-    // }
-    // &__contact-company {
-    //   margin-bottom: 2rem;
-    // }
-    // &__contact-address {
-    //   margin-bottom: 2rem;
-    //   width: 22ch;
-    // }
-    // &__contact-email {
-    //   margin-bottom: 0.5rem;
-    //   text-decoration: none;
-    //   color: white;
-    // }
+  &__contact-company {
+    margin-bottom: 2rem;
+  }
+
+  &__contact-address {
+    margin-bottom: 2rem;
+    width: 22ch;
+  }
+
+  &__contact-email {
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+    color: white;
   }
 
   /* LOGO */

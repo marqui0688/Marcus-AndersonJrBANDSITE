@@ -1,7 +1,7 @@
 //Establishing constants for Bios form//
-const form = document.querySelector("form");
+const form = document.querySelector(".form-container__form");
 const button = document.querySelector("button");
-
+console.log(form);
 //Preventing page from reloading//
 const submitForm = (e) => {
   e.preventDefault();
@@ -79,11 +79,9 @@ function displayComment() {
 
 displayComment();
 
-// Gets the form tag
-const newFormNode = document.querySelector(".form-container__button");
-
-newFormNode.addEventListener("submit", (event) => {
+form.addEventListener("submit", (event) => {
   event.preventDefault();
+  console.log(event);
 
   const newComment = {
     date: new Date(), // search how to transform the raw date into the format desired
@@ -91,9 +89,9 @@ newFormNode.addEventListener("submit", (event) => {
     comment: event.target.comment.value.trim(),
   };
 
-  comment.push(newComment);
+  commentsArray.push(newComment);
 
-  newFormNode.reset();
+  form.reset();
 
-  loadComments();
+  displayComment();
 });

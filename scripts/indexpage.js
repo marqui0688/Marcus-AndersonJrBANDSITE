@@ -2,10 +2,6 @@
 const form = document.querySelector(".form-container__form");
 const button = document.querySelector("button");
 console.log(form);
-//Preventing page from reloading//
-const submitForm = (e) => {
-  e.preventDefault();
-};
 
 //Creates our array of comments//
 let commentsArray = [
@@ -32,9 +28,11 @@ let commentsArray = [
 ///Creates function to have an array of objects already on the page (auto displays comments)
 
 function displayComment() {
+  const commentContainer = document.querySelector(".comments-container");
+  commentContainer.innerHTML = "";
   commentsArray.forEach((comment) => {
     //created elements
-    const commentContainer = document.querySelector(".comments-container");
+
     const commentName = document.createElement("h3");
     const commentDate = document.createElement("p");
     const commentComment = document.createElement("p");
@@ -66,17 +64,6 @@ function displayComment() {
   });
 }
 
-// ///Function to replace parameters
-// const commentBlock = (el, className, parent, innerText = "") => {
-//   const newElement = document.createElement(el);
-
-//   newElement.classList.add(className);
-
-//   newElement.innerText = innerText;
-
-//   return parent.appendChild(newElement);
-// };
-
 displayComment();
 
 form.addEventListener("submit", (event) => {
@@ -88,6 +75,12 @@ form.addEventListener("submit", (event) => {
     name: event.target.name.value.trim(),
     comment: event.target.comment.value.trim(),
   };
+
+  axios
+    .post("https://project-1-api.herokuapp.com/?api_key=")
+    .then((response) => {
+      console.log(response);
+    });
 
   commentsArray.unshift(newComment);
 

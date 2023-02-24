@@ -1,9 +1,6 @@
-//Establishing constants for Bios form//
 const form = document.querySelector(".form-container__form");
 const button = document.querySelector("button");
-console.log(form);
 
-//Creates our array of comments//
 let commentsArray = [
   {
     name: "Connor Walton",
@@ -48,12 +45,9 @@ function displayComment() {
     commentAvatar.classList.add("comments-container__avatar");
     commentMainWrapper.classList.add("comments-container__mainwrapper");
 
-    //Giving it a value
     commentName.innerText = comment.name;
     commentDate.innerText = comment.date;
     commentComment.innerText = comment.comment;
-
-    //start appending the child to the parent
 
     commentWrapper.appendChild(commentName);
     commentWrapper.appendChild(commentDate);
@@ -71,11 +65,12 @@ form.addEventListener("submit", (event) => {
   console.log(event);
 
   const newComment = {
-    date: new Date(), // search how to transform the raw date into the format desired
+    date: new Date(), //
     name: event.target.name.value.trim(),
     comment: event.target.comment.value.trim(),
   };
 
+  //////API////////////////////
   axios
     .post("https://project-1-api.herokuapp.com/?api_key=")
     .then((response) => {

@@ -2,11 +2,6 @@
 const form = document.querySelector("form");
 const button = document.querySelector("button");
 
-//Preventing page from reloading//
-const submitForm = (e) => {
-  e.preventDefault();
-};
-
 //Creates our array of comments//
 let showsArray = [
   {

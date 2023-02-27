@@ -2,47 +2,11 @@
 const form = document.querySelector("form");
 const button = document.querySelector("button");
 
-//Creates our array of comments//
-let showsArray = [
-  {
-    date: "Monday Sept 06 2021",
-    venue: "Ronald Lane",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Tuesday Sept 21 2021",
-    venue: "Pier 3 East",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Fri Oct 15 2021 ",
-    venue: "View Lounge",
-    location: "San Francisco, CA ",
-  },
-  {
-    date: "Sat Nov 06 2021",
-    venue: "Hyatt Agency",
-    location: "San Francisco, CA ",
-  },
-  {
-    date: "Fri Nov 26 2021",
-    venue: "Moscow Center",
-    location: "San Francisco, CA ",
-  },
-  {
-    date: "Wed Dec 15 2021",
-    venue: "Press Lounge",
-    location: "San Francisco, CA ",
-  },
-];
-
 ///Creates function to have an array of objects already on the page (auto displays shows)
 
-function displayShow() {
+function displayShow(shows) {
   const showsContainer = document.querySelector(".shows-container");
-  showsArray.forEach((show) => {
-    //created elements
-
+  shows.forEach((show) => {
     const showsListItem = document.createElement("li");
     const showsDate = document.createElement("h3");
     const showsDateValue = document.createElement("p");
@@ -52,25 +16,24 @@ function displayShow() {
     const showsLocationValue = document.createElement("p");
     const showsButton = document.createElement("button");
 
-    //gave element a classS
     showsDate.classList.add("shows__date");
     showsVenue.classList.add("shows__venue");
     showsLocation.classList.add("shows__location");
     showsButton.classList.add("shows__button");
+
     showsListItem.classList.add("shows__list-item");
+
     showsDateValue.classList.add("shows__date-text");
     showsVenueValue.classList.add("shows__name-text");
     showsLocationValue.classList.add("shows__location-text");
-    //Giving it a value
+
     showsDate.innerText = "DATE";
-    showsDateValue.innerText = show.date;
+    showsDateValue.innerText = new Date(show.date).toDateString();
     showsLocation.innerText = "LOCATION";
     showsLocationValue.innerText = show.location;
     showsVenue.innerText = "VENUE";
-    showsVenueValue.innerText = show.venue;
+    showsVenueValue.innerText = show.place;
     showsButton.innerText = "BUY TICKETS";
-
-    //start appending the child to the parent
 
     showsListItem.appendChild(showsDate);
     showsListItem.appendChild(showsDateValue);
@@ -81,7 +44,28 @@ function displayShow() {
     showsListItem.appendChild(showsButton);
 
     showsContainer.appendChild(showsListItem);
+
+    showsListItem.addEventListener("click", () => {
+      console.log("click");
+      const selected = document.querySelector(".shows__list-item--selected");
+      if (selected) {
+        selected.classList.remove("shows__list-item--selected");
+        console.log(selected);
+      }
+      showsListItem.classList.add("shows__list-item--selected");
+      console.log(showsListItem);
+    });
   });
 }
 
-displayShow();
+axios
+  .get(
+    "https://project-1-api.herokuapp.com/showdates?api_key=e0eea5f0-0f8c-4b54-9fc4-ff50843766d4"
+  )
+  .then((response) => {
+    console.log(response.data);
+    displayShow(response.data);
+  })
+  .catch((error) => {
+    console.log(error);
+  });

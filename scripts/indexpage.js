@@ -1,33 +1,12 @@
 const form = document.querySelector(".form-container__form");
 const button = document.querySelector("button");
 
-let commentsArray = [
-  {
-    name: "Connor Walton",
-    date: "02/17/2021",
-    comment:
-      "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-  },
-  {
-    name: "Emilie Beach",
-    date: "01/09/2021",
-    comment:
-      "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-  },
-  {
-    name: "Miles Acosta",
-    date: "12/20/2020",
-    comment:
-      "I can't stop listening. Every time I hear one of their songs the vocals it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-  },
-];
-
 ///Creates function to have an array of objects already on the page (auto displays comments)
 
-function displayComment() {
+function displayComment(comments) {
   const commentContainer = document.querySelector(".comments-container");
   commentContainer.innerHTML = "";
-  commentsArray.forEach((comment) => {
+  comments.forEach((comment) => {
     //created elements
 
     const commentName = document.createElement("h3");
@@ -46,7 +25,7 @@ function displayComment() {
     commentMainWrapper.classList.add("comments-container__mainwrapper");
 
     commentName.innerText = comment.name;
-    commentDate.innerText = comment.date;
+    commentDate.innerText = new Date(comment.timestamp).toDateString();
     commentComment.innerText = comment.comment;
 
     commentWrapper.appendChild(commentName);
@@ -58,28 +37,48 @@ function displayComment() {
   });
 }
 
-displayComment();
-
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   console.log(event);
 
   const newComment = {
-    date: new Date(), //
     name: event.target.name.value.trim(),
     comment: event.target.comment.value.trim(),
   };
 
-  //////API////////////////////
+  ///////////////  API   //////////////
   axios
-    .post("https://project-1-api.herokuapp.com/?api_key=")
+    .post(
+      "https://project-1-api.herokuapp.com/comments/?api_key=e0eea5f0-0f8c-4b54-9fc4-ff50843766d4",
+      newComment
+    )
     .then((response) => {
       console.log(response);
-    });
-
-  commentsArray.unshift(newComment);
+      axios
+        .get(
+          "https://project-1-api.herokuapp.com/comments?api_key=e0eea5f0-0f8c-4b54-9fc4-ff50843766d4"
+        )
+        .then((response) => {
+          console.log(response);
+          displayComment(response.data);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    })
+    .catch((err) => console.log(err));
 
   form.reset();
-
-  displayComment();
 });
+
+axios
+  .get(
+    "https://project-1-api.herokuapp.com/comments?api_key=e0eea5f0-0f8c-4b54-9fc4-ff50843766d4"
+  )
+  .then((response) => {
+    console.log(response);
+    displayComment(response.data);
+  })
+  .catch((error) => {
+    console.log(error);
+  });

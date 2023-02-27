@@ -41,6 +41,7 @@ header {
   &__list {
     display: flex;
     justify-content: space-around;
+    padding: 2rem;
   }
 
   &__logo {
@@ -67,7 +68,6 @@ header {
     }
 
     @include tablet {
-      margin: 1rem;
       margin-right: 2.3rem;
     }
 
@@ -181,7 +181,7 @@ header {
   margin-left: 1rem;
   @include tablet {
     position: absolute;
-    top: 3rem;
+
     right: 3rem;
     margin: 0;
   }

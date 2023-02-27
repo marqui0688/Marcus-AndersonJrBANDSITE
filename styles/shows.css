@@ -38,6 +38,7 @@ header {
 .navigation__list {
   display: flex;
   justify-content: space-around;
+  padding: 2rem;
 }
 .navigation__logo {
   color: white;
@@ -61,7 +62,6 @@ header {
 }
 @media (min-width: 768px) {
   .navigation__item {
-    margin: 1rem;
     margin-right: 2.3rem;
   }
 }
@@ -179,7 +179,6 @@ header {
 @media (min-width: 768px) {
   .footer__logo {
     position: absolute;
-    top: 3rem;
     right: 3rem;
     margin: 0;
   }
@@ -218,7 +217,7 @@ header {
   display: flex;
   background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("/assets/Images/Photo-gallery-3.jpg");
   width: 100%;
-  height: 55vh;
+  height: 45vh;
   background-position: center;
   background-size: cover;
   align-items: center;
@@ -262,7 +261,7 @@ header {
 .hero__miniheader {
   color: white;
   position: absolute;
-  top: 1rem;
+  top: 2.3rem;
   margin-left: 1rem;
 }
 @media (min-width: 768px) {
@@ -270,13 +269,13 @@ header {
     font-size: 1.5rem;
     font-weight: 600;
     margin-left: 2.5rem;
-    margin-top: 4rem;
+    margin-top: 3rem;
   }
 }
 @media (min-width: 768px) and (min-width: 1280px) {
   .hero__miniheader {
     margin-left: 7rem;
-    margin-top: 16rem;
+    margin-top: 15rem;
     font-size: 1.8rem;
   }
 }
@@ -302,7 +301,7 @@ header {
 @media (min-width: 768px) and (min-width: 1280px) {
   .iframe {
     width: 40%;
-    bottom: 25rem;
+    bottom: 17rem;
     right: 5rem;
   }
 }
@@ -384,7 +383,10 @@ header {
   margin-top: 2rem;
 }
 .shows__list-item:hover {
-  border: 4px solid rgb(226, 74, 234);
+  background-color: #e1e1e1;
+}
+.shows__list-item--selected {
+  background-color: #e1e1e1;
 }
 @media (min-width: 768px) {
   .shows__list-item {
